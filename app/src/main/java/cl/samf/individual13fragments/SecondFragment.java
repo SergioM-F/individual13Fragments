@@ -75,11 +75,11 @@ public class SecondFragment extends Fragment {
         binding.buttonFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                System.exit(0);
+                back();
+                //System.exit(0);
                 //no me funciono
-                // FragmentManager fm = getParentFragmentManager();
-                // fm.popBackStack();
+                 //FragmentManager fm = getParentFragmentManager();
+                 //fm.popBackStack();
             }
         });
 
@@ -87,4 +87,9 @@ public class SecondFragment extends Fragment {
         return  binding.getRoot();
 
         }
+
+    private void back() {
+        FragmentManager fm = getParentFragmentManager();
+        fm.popBackStack();
     }
+}

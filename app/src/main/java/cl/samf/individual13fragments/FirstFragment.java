@@ -71,7 +71,7 @@ public class FirstFragment extends Fragment {
                     if (!url.isEmpty()) {
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,
                                 SecondFragment.newInstance(url, ""),
-                                "").commit();
+                                "Second").addToBackStack(null).commit();
 
 
                     } else {
